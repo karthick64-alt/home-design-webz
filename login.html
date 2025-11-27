@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HomeDecor</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <section class="auth-section" style="padding: 4rem 0; min-height: 100vh; display: flex; align-items: center;">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-logo">
+                        <a href="index.html"><i class="fas fa-home"></i> HomeDecor</a>
+                    </div>
+                    <h2>Login</h2>
+                    
+                    <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">Welcome back! Please login to your account.</p>
+                    
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password *</label>
+                            <input type="password" name="password" required>
+                        </div>
+                        <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                            <label style="margin: 0;">
+                                <input type="checkbox" name="remember">
+                                Remember me
+                            </label>
+                            <a href="#" style="color: var(--primary-color); text-decoration: none;">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                    </form>
+                    
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+                    
+                    <!-- Social Login Buttons -->
+                    <div class="social-login">
+                        <button type="button" class="btn-social btn-facebook" id="facebookLogin">
+                            <i class="fab fa-facebook-f"></i> Login with Facebook
+                        </button>
+                        <button type="button" class="btn-social btn-google" id="googleLogin">
+                            <i class="fab fa-google"></i> Login with Google
+                        </button>
+                    </div>
+                    <p style="text-align: center; margin-top: 2rem;">
+                        Don't have an account? <a href="signup.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <style>
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .auth-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .auth-logo a {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .auth-logo a i {
+            font-size: 2rem;
+        }
+        .auth-card {
+            background: var(--bg-white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            max-width: 450px;
+        }
+        .auth-card h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0;
+        }
+        .btn-social {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .btn-facebook {
+            background: #1877F2;
+            color: white;
+            border-color: #1877F2;
+        }
+        .btn-facebook:hover {
+            background: #166FE5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(24, 119, 242, 0.3);
+        }
+        .btn-google {
+            background: white;
+            color: #4285F4;
+            border-color: #dadce0;
+        }
+        .btn-google:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="dark"] .btn-google {
+            background: var(--bg-secondary);
+            color: #4285F4;
+            border-color: var(--border-color);
+        }
+        [data-theme="dark"] .btn-google:hover {
+            background: var(--bg-primary);
+        }
+        .divider {
+            text-align: center;
+            margin: 1.5rem 0 1rem 0;
+            position: relative;
+        }
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--border-color);
+        }
+        .divider span {
+            background: var(--bg-white);
+            padding: 0 1rem;
+            position: relative;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        [data-theme="dark"] .divider span {
+            background: var(--bg-secondary);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+    </style>
+</body>
+</html>
+

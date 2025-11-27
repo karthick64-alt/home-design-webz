@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - HomeDecor</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><i class="fas fa-home"></i> HomeDecor</a>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="shop.html" class="active">Shop</a>
+                    <a href="services.html">Services</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+                    <a href="wishlist.html" class="wishlist-btn"><i class="far fa-heart"></i> <span class="wishlist-count">0</span></a>
+                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                    <a href="login.html" class="account-btn"><i class="far fa-user"></i></a>
+                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <span class="close-search" id="closeSearch">&times;</span>
+            <input type="text" placeholder="Search products, categories..." id="searchInput">
+            <button class="search-submit"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <section class="cart-section" style="padding: 3rem 0;">
+        <div class="container">
+            <h1 style="margin-bottom: 2rem;">Shopping Cart</h1>
+            <div class="cart-layout">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be loaded via JavaScript -->
+                </div>
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span id="shipping">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span id="tax">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                    <div class="coupon-section">
+                        <input type="text" id="couponCode" placeholder="Enter coupon code">
+                        <button class="btn btn-white" onclick="applyCoupon()">Apply</button>
+                    </div>
+                    <a href="checkout.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem; text-align: center;">Proceed to Checkout</a>
+                    <a href="shop.html" style="display: block; text-align: center; margin-top: 1rem; color: var(--primary-color);">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="index.html"><i class="fas fa-home"></i> HomeDecor</a>
+                    </div>
+                    <p>Transforming spaces into beautiful homes since 2010. Your trusted partner in home decor and interior design.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Design Street, City, State 12345</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@homedecor.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HomeDecor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <style>
+        .cart-layout {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 2rem;
+        }
+        .cart-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-white);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+        }
+        .cart-item-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+        .cart-item-image img,
+        .cart-item-image .cart-placeholder {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .cart-item-details {
+            flex: 1;
+        }
+        .cart-item-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .cart-item-price {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 0.3rem;
+        }
+        .quantity-control button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.3rem 0.5rem;
+        }
+        .quantity-control input {
+            width: 50px;
+            text-align: center;
+            border: none;
+        }
+        .remove-item {
+            color: var(--error-color);
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+        }
+        .cart-summary {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        .cart-summary h3 {
+            margin-bottom: 1.5rem;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .summary-row.total {
+            border-bottom: none;
+            border-top: 2px solid var(--border-color);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .coupon-section {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .coupon-section input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+        }
+        .empty-cart {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--bg-white);
+            border-radius: 10px;
+        }
+        .empty-cart i {
+            font-size: 4rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 968px) {
+            .cart-layout {
+                grid-template-columns: 1fr;
+            }
+            .cart-summary {
+                position: static;
+            }
+        }
+        @media (max-width: 480px) {
+            .cart-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .cart-item-image {
+                width: 100%;
+                height: 200px;
+            }
+            .cart-item-title {
+                font-size: 1.1rem;
+            }
+            .cart-item-price {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</body>
+</html>
+

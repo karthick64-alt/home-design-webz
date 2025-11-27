@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Services - HomeDecor</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><i class="fas fa-home"></i> HomeDecor</a>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="services.html" class="active">Services</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+                    <a href="wishlist.html" class="wishlist-btn"><i class="far fa-heart"></i> <span class="wishlist-count">0</span></a>
+                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                    <a href="login.html" class="account-btn"><i class="far fa-user"></i></a>
+                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <span class="close-search" id="closeSearch">&times;</span>
+            <input type="text" placeholder="Search products, categories..." id="searchInput">
+            <button class="search-submit"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 100px 0; text-align: center; color: white;">
+        <div class="container">
+            <h1>Interior Design Services</h1>
+            <p>Transform your space with our expert design team</p>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="service-overview" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="service-intro">
+                <h2 class="section-title">Professional Interior Design</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.2rem; color: var(--text-light);">
+                    Our experienced interior designers work with you to create beautiful, functional spaces that reflect your personal style and lifestyle. From concept to completion, we handle every detail.
+                </p>
+            </div>
+            <div class="service-features">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-pencil-ruler"></i></div>
+                    <h3>Custom Design</h3>
+                    <p>Tailored designs that match your unique style and preferences</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3>Expert Team</h3>
+                    <p>Work with award-winning designers with years of experience</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Full Service</h3>
+                    <p>From planning to installation, we handle everything</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Timely Delivery</h3>
+                    <p>Projects completed on schedule and within budget</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Packages -->
+    <section class="service-packages" style="background: var(--bg-white); padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title">Our Packages</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Basic Package</h3>
+                        <div class="package-price">$999</div>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Initial consultation (2 hours)</li>
+                        <li><i class="fas fa-check"></i> Design concept & mood board</li>
+                        <li><i class="fas fa-check"></i> Color scheme & material selection</li>
+                        <li><i class="fas fa-check"></i> Shopping list with product recommendations</li>
+                        <li><i class="fas fa-check"></i> 1 revision round</li>
+                        <li><i class="fas fa-check"></i> Email support (30 days)</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openBookingModal('basic')">Book Now</button>
+                </div>
+                <div class="package-card featured">
+                    <div class="package-badge">Most Popular</div>
+                    <div class="package-header">
+                        <h3>Premium Package</h3>
+                        <div class="package-price">$2,499</div>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Everything in Basic</li>
+                        <li><i class="fas fa-check"></i> Detailed floor plans & 3D renderings</li>
+                        <li><i class="fas fa-check"></i> Full room design (up to 2 rooms)</li>
+                        <li><i class="fas fa-check"></i> Furniture & decor sourcing</li>
+                        <li><i class="fas fa-check"></i> 3 revision rounds</li>
+                        <li><i class="fas fa-check"></i> On-site visits (2 visits)</li>
+                        <li><i class="fas fa-check"></i> Project management support</li>
+                        <li><i class="fas fa-check"></i> Priority support (60 days)</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openBookingModal('premium')">Book Now</button>
+                </div>
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Luxury Package</h3>
+                        <div class="package-price">$4,999</div>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Everything in Premium</li>
+                        <li><i class="fas fa-check"></i> Complete home design (unlimited rooms)</li>
+                        <li><i class="fas fa-check"></i> Custom furniture design</li>
+                        <li><i class="fas fa-check"></i> Unlimited revisions</li>
+                        <li><i class="fas fa-check"></i> Full project management</li>
+                        <li><i class="fas fa-check"></i> Installation supervision</li>
+                        <li><i class="fas fa-check"></i> Styling & final touches</li>
+                        <li><i class="fas fa-check"></i> 1-year support & maintenance</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openBookingModal('luxury')">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="service-portfolio" style="padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Modern Living Room">
+                    </div>
+                    <h4>Modern Living Room</h4>
+                    <p>Contemporary design with minimalist aesthetics</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.pexels.com/photos/1648771/pexels-photo-1648771.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Luxury Bedroom">
+                    </div>
+                    <h4>Luxury Bedroom</h4>
+                    <p>Elegant and sophisticated bedroom design</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Cozy Kitchen">
+                    </div>
+                    <h4>Cozy Kitchen</h4>
+                    <p>Warm and inviting kitchen space</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Home Office">
+                    </div>
+                    <h4>Home Office</h4>
+                    <p>Productive and stylish workspace</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="gallery.html" class="btn btn-primary">View Full Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="booking-modal" id="bookingModal">
+        <div class="booking-modal-content">
+            <span class="close-booking" id="closeBooking">&times;</span>
+            <h2>Book a Consultation</h2>
+            <form id="bookingForm">
+                <input type="hidden" id="selectedPackage" name="package">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone *</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Date *</label>
+                    <input type="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Time *</label>
+                    <select name="time" required>
+                        <option value="">Select time</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Project Type</label>
+                    <select name="projectType">
+                        <option value="living-room">Living Room</option>
+                        <option value="bedroom">Bedroom</option>
+                        <option value="kitchen">Kitchen</option>
+                        <option value="bathroom">Bathroom</option>
+                        <option value="office">Home Office</option>
+                        <option value="full-home">Full Home</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Additional Notes</label>
+                    <textarea name="notes" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="index.html"><i class="fas fa-home"></i> HomeDecor</a>
+                    </div>
+                    <p>Transforming spaces into beautiful homes since 2010. Your trusted partner in home decor and interior design.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Design Street, City, State 12345</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@homedecor.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HomeDecor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+    <style>
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .package-card {
+            background: var(--bg-white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .package-card.featured {
+            border: 2px solid var(--primary-color);
+        }
+        .package-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .package-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 0.5rem;
+        }
+        .package-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+        .package-card .btn {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+        }
+        .package-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .package-features li i {
+            color: var(--success-color);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .portfolio-item {
+            text-align: center;
+        }
+        .portfolio-image {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .portfolio-image:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+        .portfolio-image:hover img {
+            transform: scale(1.1);
+        }
+        .portfolio-item h4 {
+            margin: 1rem 0 0.5rem;
+        }
+        .booking-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .booking-modal.active {
+            display: flex;
+        }
+        .booking-modal-content {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        .close-booking {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+    </style>
+</body>
+</html>
+

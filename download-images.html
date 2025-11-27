@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Images for HomeDecor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #667eea;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .image-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        .image-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #333;
+        }
+        .image-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+        .download-btn:hover {
+            background: #764ba2;
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🖼️ Download Images for HomeDecor Website</h1>
+    
+    <div class="instructions">
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Right-click on each image below</li>
+            <li>Select "Save image as..." or "Save picture as..."</li>
+            <li>Save to the <code>images</code> folder with the suggested filename</li>
+            <li>Refresh your website to see the images!</li>
+        </ol>
+        <p><strong>Note:</strong> If images don't load, check that the <code>images</code> folder exists in your project root.</p>
+    </div>
+
+    <div class="image-grid">
+        <div class="image-card">
+            <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hero Slide 1">
+            <h3>Hero Slide 1</h3>
+            <p><strong>Save as:</strong> <code>hero-1.jpg</code></p>
+            <p><strong>Size:</strong> 1920x1080px</p>
+            <p><strong>Use:</strong> First hero banner slide</p>
+            <a href="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920" class="download-btn" download="hero-1.jpg">Download Image</a>
+        </div>
+
+        <div class="image-card">
+            <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hero Slide 2">
+            <h3>Hero Slide 2</h3>
+            <p><strong>Save as:</strong> <code>hero-2.jpg</code></p>
+            <p><strong>Size:</strong> 1920x1080px</p>
+            <p><strong>Use:</strong> Second hero banner slide</p>
+            <a href="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1920" class="download-btn" download="hero-2.jpg">Download Image</a>
+        </div>
+
+        <div class="image-card">
+            <img src="https://images.pexels.com/photos/1648771/pexels-photo-1648771.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hero Slide 3">
+            <h3>Hero Slide 3</h3>
+            <p><strong>Save as:</strong> <code>hero-3.jpg</code></p>
+            <p><strong>Size:</strong> 1920x1080px</p>
+            <p><strong>Use:</strong> Third hero banner slide</p>
+            <a href="https://images.pexels.com/photos/1648771/pexels-photo-1648771.jpeg?auto=compress&cs=tinysrgb&w=1920" class="download-btn" download="hero-3.jpg">Download Image</a>
+        </div>
+
+        <div class="image-card">
+            <img src="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Newsletter Background">
+            <h3>Newsletter Background</h3>
+            <p><strong>Save as:</strong> <code>newsletter-bg.jpg</code></p>
+            <p><strong>Size:</strong> 1920x800px</p>
+            <p><strong>Use:</strong> Newsletter section background</p>
+            <a href="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1920" class="download-btn" download="newsletter-bg.jpg">Download Image</a>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h2>Alternative: Use Your Own Images</h2>
+        <p>If you prefer to use your own images:</p>
+        <ol>
+            <li>Find interior design images (1920x1080px or larger)</li>
+            <li>Save them in the <code>images</code> folder with the names above</li>
+            <li>The website will automatically use them!</li>
+        </ol>
+        <p><strong>Free Image Sources:</strong></p>
+        <ul>
+            <li><a href="https://www.pexels.com/search/interior%20design/" target="_blank">Pexels - Interior Design</a></li>
+            <li><a href="https://unsplash.com/s/photos/interior-design" target="_blank">Unsplash - Interior Design</a></li>
+            <li><a href="https://pixabay.com/images/search/interior%20design/" target="_blank">Pixabay - Interior Design</a></li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 3rem; padding: 2rem; background: white; border-radius: 10px;">
+        <h2>✅ After Downloading:</h2>
+        <p>1. Make sure all images are saved in the <code>images</code> folder</p>
+        <p>2. Verify the file names match exactly: <code>hero-1.jpg</code>, <code>hero-2.jpg</code>, <code>hero-3.jpg</code>, <code>newsletter-bg.jpg</code></p>
+        <p>3. Open <code>index.html</code> in your browser to see the images!</p>
+        <p>4. If images still don't show, check the browser console (F12) for errors</p>
+    </div>
+
+    <div style="margin-top: 2rem; padding: 2rem; background: #e8f5e9; border-radius: 10px; border-left: 4px solid #4caf50;">
+        <h2>📦 Product Images</h2>
+        <p><strong>Good News!</strong> Product images are already configured and will load automatically from Pexels CDN.</p>
+        <p>All 8 products now have real images:</p>
+        <ul>
+            <li>Modern Sofa Set - Furniture image</li>
+            <li>Crystal Chandelier - Lighting image</li>
+            <li>Abstract Wall Art - Wall art image</li>
+            <li>Decorative Vase Set - Decor image</li>
+            <li>Persian Rug - Rug image</li>
+            <li>Ceramic Planter - Planter image</li>
+            <li>Dining Table Set - Dining furniture image</li>
+            <li>Floor Lamp - Lamp image</li>
+        </ul>
+        <p>These images are loaded from <strong>Pexels</strong> and will display automatically on:</p>
+        <ul>
+            <li>Homepage (Trending Products section)</li>
+            <li>Shop page (Product listings)</li>
+            <li>Product detail pages</li>
+            <li>Cart page</li>
+            <li>Wishlist page</li>
+        </ul>
+        <p><em>Note: Product images are configured in <code>js/main.js</code>. To use local images, save them as <code>product-1.jpg</code> through <code>product-8.jpg</code> in the images folder and update the paths in <code>js/main.js</code>.</em></p>
+    </div>
+</body>
+</html>
+
